@@ -19,61 +19,6 @@ npm run build
 
 ---
 
-## 📁 Assets — What You Need To Add
-
-Place all your own files inside the `public/assets/` folder:
-
-### Your Photo
-```
-public/assets/img/me.jpg          ← Your profile photo (shown on hero)
-```
-
-### Project Videos (demo recordings)
-```
-public/assets/videos/object-detection-demo.mp4
-public/assets/videos/credit-default-demo.mp4
-public/assets/videos/innerforge-demo.mp4
-```
-> If a video file is missing, the page shows a placeholder automatically.
-
-### Project Screenshots (optional fallback)
-```
-public/assets/img/projects/object-detection.png
-public/assets/img/projects/credit-default.png
-public/assets/img/projects/innerforge.png
-```
-
-### Academic Certificates (PDF — shown inline without clicking)
-```
-public/assets/certificates/mca-certificate.pdf
-public/assets/certificates/bca-certificate.pdf
-public/assets/certificates/hsc-certificate.pdf
-public/assets/certificates/sslc-certificate.pdf
-public/assets/certificates/cloud-workshop.pdf
-public/assets/certificates/code-crusade.pdf
-```
-
-### Project Reports (PDF)
-```
-public/assets/reports/object-detection-report.pdf
-public/assets/reports/credit-default-report.pdf
-```
-> Rename your existing PDFs to match these names, or update `src/data/projects.js`.
-
-### Resume
-```
-public/assets/Arun_Das_Resume.pdf
-```
-
-### Social Media Screenshots
-```
-public/assets/social/github.png      ← Screenshot of your GitHub profile
-public/assets/social/linkedin.png    ← Screenshot of your LinkedIn profile
-public/assets/social/hackerrank.png  ← Screenshot of your HackerRank profile
-```
-
----
-
 ## ✏️ Customisation
 
 | File | What to edit |
@@ -86,9 +31,8 @@ public/assets/social/hackerrank.png  ← Screenshot of your HackerRank profile
 | `src/components/Hero.jsx` | Hero text, availability status |
 
 ### Update your live project links
-In `src/data/projects.js`, fill in the `live` field for each project:
-```js
-live: 'https://your-deployed-site.vercel.app',
+
+live: 'https://itsmearundas-github-io.vercel.app/',
 ```
 
 ---
@@ -97,14 +41,6 @@ live: 'https://your-deployed-site.vercel.app',
 
 This project is a standard Vite + React SPA (client-side routing via `react-router-dom`'s `BrowserRouter`). It's ready to deploy as-is on any static host. `vercel.json` and `netlify.toml` are already included so that deep links like `/project/innerforge` don't 404 on refresh.
 
-### GitHub Pages
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-git branch -M main
-git remote add origin https://github.com/<your-username>/<your-repo>.git
-git push -u origin main
 
 npm run deploy   # builds and pushes dist/ to the gh-pages branch
 ```
