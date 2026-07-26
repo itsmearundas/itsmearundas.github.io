@@ -22,6 +22,9 @@ export default function App() {
   // away, the hero was already sitting in its final state and the
   // animation was never actually seen.
   useEffect(() => {
+    // Safety net: guarantee scroll is never left locked on any route.
+    document.body.style.overflow = '';
+    document.documentElement.style.overflow = '';
     window.scrollTo(0, 0);
     setTimeout(() => {
       const obs = new IntersectionObserver(

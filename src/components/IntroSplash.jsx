@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import ImageSequenceLayer from './ImageSequenceLayer';
 import useImageSequence from '../hooks/useImageSequence';
 
@@ -24,14 +24,27 @@ export default function IntroSplash({ onComplete }) {
   const [phase, setPhase] = useState(introImages.length === 0 ? 'done' : 'playing');
   const introIndex = useImageSequence(introImages, INTRO_INTERVAL_MS, phase === 'playing');
 
+  // Keep a stable ref to the latest onComplete. BUG FIX: the effects below
+  // used to depend on `onComplete` directly, but App passes a brand-new
+  // inline function on every re-render (it re-renders on every route
+  // change via useLocation). That made the scroll-lock effect re-fire on
+  // every navigation — even long after the intro had finished — locking
+  // `body { overflow: hidden }` back on with no matching cleanup, since by
+  // then `phase` was already 'done' and never transitions again. Routing
+  // the callback through a ref lets the effects below run mount-only.
+  const onCompleteRef = useRef(onComplete);
+  useEffect(() => { onCompleteRef.current = onComplete; }, [onComplete]);
+
   useEffect(() => {
     if (introImages.length === 0) {
-      if (onComplete) onComplete();
+      onCompleteRef.current?.();
       return undefined;
     }
     document.body.style.overflow = 'hidden';
-    return undefined;
-  }, [onComplete]);
+    // Always restore scroll on unmount, even if the intro never finished
+    // naturally — belt-and-suspenders so scroll can never get stuck.
+    return () => { document.body.style.overflow = ''; };
+  }, []); // mount-only — do not add onComplete here, see note above
 
   // Monitors playback. Moves to 'fading' and signals the ripple hook once it reaches the last frame.
   useEffect(() => {
@@ -39,9 +52,9 @@ export default function IntroSplash({ onComplete }) {
 
     if (introIndex === introImages.length - 1) {
       setPhase('fading');
-      if (onComplete) onComplete();
+      onCompleteRef.current?.();
     }
-  }, [introIndex, phase, onComplete]);
+  }, [introIndex, phase]);
 
   useEffect(() => {
     if (phase !== 'fading') return undefined;

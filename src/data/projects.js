@@ -1,6 +1,5 @@
 // ── Projects Data ──
-// Place your demo videos in: public/assets/videos/
-// Place screenshots in:      public/assets/img/projects/
+// Place screenshots (app home page) in: public/assets/img/projects/
 
 export const projects = [
   {
@@ -15,8 +14,7 @@ export const projects = [
       'A two-stage deep learning pipeline combining YOLOv8n for real-time object localisation and a fine-tuned EfficientNet-B0 classifier. The system achieves 85.41% test accuracy and 0.85 macro-F1 across 17 CIFAR-100 classes with ByteTrack multi-object tracking. A responsive React frontend supports mode-switching between image, video, and webcam with zero page refreshes.',
     period: 'Jan 2026 – Mar 2026',
     github: 'https://github.com/itsmearundas/Detecting-and-classifying-multiple-objects-in-images-and-videos',
-    live: 'https://itsmearundas.github.io/Detecting-and-classifying-multiple-objects-in-images-and-videos/#',
-    video: '/assets/videos/object-detection-demo.mp4', // Place your video here
+    live: 'https://itsmearundas.github.io/Detecting-and-classifying-multiple-objects-in-images-and-videos/#download',
     screenshot: '/assets/img/projects/object-detection.png',
     techStack: [
       'Python', 'YOLOv8n', 'EfficientNet-B0', 'ByteTrack',
@@ -52,8 +50,7 @@ export const projects = [
       'Full-stack ML web application that predicts whether a credit card customer will default on their next payment. Trained a Random Forest classifier on 30,000 records from the Taiwan Credit Card Default dataset (UCI). Compared with XGBoost with full SMOTE balancing, feature engineering, and GridSearchCV hyperparameter tuning. Deployed via a Flask backend with a React frontend and MongoDB storage.',
     period: 'Jun 2025 – Dec 2025',
     github: 'https://github.com/itsmearundas/credit-default',
-    // live: 'https://your-credit-default-demo.vercel.app', // ← Replace with your actual live URL
-    video: '/assets/videos/credit-default-demo.mp4', // Place your video here
+    live: 'https://your-credit-default-demo.vercel.app', // ← Replace with your actual live URL
     screenshot: '/assets/img/projects/credit-default.png',
     techStack: [
       'Python', 'Random Forest', 'XGBoost', 'scikit-learn',
@@ -90,7 +87,6 @@ export const projects = [
     period: '2025 — Present',
     github: '', // Add your GitHub link here
     live: '', // Add your live link here
-    video: '/assets/videos/innerforge-demo.mp4', // Place your video here
     screenshot: '/assets/img/projects/innerforge.png',
     techStack: [
       'React', 'Vite', 'TipTap', 'Zustand', 'Tailwind CSS',
@@ -129,7 +125,6 @@ export const projects = [
     period: '2025',
     github: 'https://github.com/itsmearundas/ExpenseTracker',
     live: 'https://expensetracker-33dk.onrender.com/',
-    video: '',
     screenshot: '/assets/img/projects/expense-tracker.png',
     techStack: ['Python', 'Flask', 'SQLite', 'JavaScript', 'HTML5', 'CSS3'],
     features: [
@@ -160,7 +155,6 @@ export const projects = [
     period: '2025',
     github: 'https://github.com/itsmearundas/LocalDrop',
     live: 'https://localdrop-f9fj.onrender.com/',
-    video: '',
     screenshot: '/assets/img/projects/localdrop.png',
     techStack: ['Node.js', 'Express', 'Socket.io', 'React.js', 'QR Code'],
     features: [
@@ -190,7 +184,6 @@ export const projects = [
     period: '2026',
     github: 'https://github.com/itsmearundas/PDFForge',
     live: 'https://itsmearundas.github.io/PDFForge/',
-    video: '',
     screenshot: '/assets/img/projects/pdfforge.png',
     techStack: ['JavaScript', 'HTML5', 'CSS3', 'pdf-lib', 'Canvas API'],
     features: [
@@ -222,7 +215,6 @@ export const projects = [
     period: '2026',
     github: 'https://github.com/itsmearundas/VaultLock',
     live: 'https://itsmearundas.github.io/Vault-Lock/',
-    video: '',
     screenshot: '/assets/img/projects/vaultlock.png',
     techStack: ['AES-256-CTR', 'HMAC-SHA256', 'Windows Desktop'],
     features: [
@@ -254,7 +246,6 @@ export const projects = [
     period: '2026',
     github: 'https://github.com/itsmearundas/TypeForge',
     live: 'https://itsmearundas.github.io/TypeForge/',
-    video: '',
     screenshot: '/assets/img/projects/typeforge.png',
     techStack: ['JavaScript', 'HTML5', 'CSS3', 'Chart rendering'],
     features: [

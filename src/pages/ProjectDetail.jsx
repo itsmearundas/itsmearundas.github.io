@@ -1,13 +1,12 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { projects } from '../data/projects';
 
 export default function ProjectDetail() {
   const { id } = useParams();
   const nav = useNavigate();
   const project = projects.find(p => p.id === id);
-  const videoRef = useRef(null);
-  const [vidErr, setVidErr] = useState(false);
+  const [imgErr, setImgErr] = useState(false);
 
   useEffect(() => { window.scrollTo(0, 0); }, [id]);
 
@@ -90,38 +89,23 @@ export default function ProjectDetail() {
       </div>
 
       <div className="proj-detail-layout">
-        {/* ── LEFT: Video + links ── */}
+        {/* ── LEFT: Screenshot + links ── */}
         <div className="proj-detail-left">
-          <div className="video-wrap">
-            {!vidErr ? (
-              <video
-                ref={videoRef}
-                src={p.video}
-                controls
-                playsInline
-                onError={() => setVidErr(true)}
+          <div className="screenshot-wrap">
+            {!imgErr && p.screenshot ? (
+              <img
+                src={p.screenshot}
+                alt={`${p.title} — app home page`}
+                onError={() => setImgErr(true)}
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />
             ) : (
-              <div className="video-placeholder">
-                <i className="fas fa-play-circle" />
-                {p.video ? (
-                  <p>Demo video coming soon.<br />Place <code style={{ fontSize: '.65rem', background: 'rgba(255,255,255,.08)', padding: '2px 6px', borderRadius: 4 }}>{p.video}</code> in the public folder.</p>
-                ) : (
-                  <p>Demo video coming soon.</p>
-                )}
+              <div className="screenshot-placeholder">
+                <i className="fas fa-image" />
+                <p>Screenshot coming soon.<br />Place <code style={{ fontSize: '.65rem', background: 'rgba(255,255,255,.08)', padding: '2px 6px', borderRadius: 4 }}>{p.screenshot}</code> in the public folder.</p>
               </div>
             )}
           </div>
-
-          {vidErr && p.screenshot && (
-            <img
-              src={p.screenshot}
-              alt={p.title}
-              onError={e => e.target.style.display = 'none'}
-              style={{ width: '100%', borderRadius: 16, marginBottom: 20, border: '1px solid rgba(255,255,255,.08)' }}
-            />
-          )}
 
           {/* ── Action buttons ── */}
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 24 }}>
@@ -251,4 +235,3 @@ export default function ProjectDetail() {
     </div>
   );
 }
-
