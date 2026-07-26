@@ -14,7 +14,7 @@ export const projects = [
       'A two-stage deep learning pipeline combining YOLOv8n for real-time object localisation and a fine-tuned EfficientNet-B0 classifier. The system achieves 85.41% test accuracy and 0.85 macro-F1 across 17 CIFAR-100 classes with ByteTrack multi-object tracking. A responsive React frontend supports mode-switching between image, video, and webcam with zero page refreshes.',
     period: 'Jan 2026 – Mar 2026',
     github: 'https://github.com/itsmearundas/Detecting-and-classifying-multiple-objects-in-images-and-videos',
-    live: 'https://itsmearundas.github.io/Detecting-and-classifying-multiple-objects-in-images-and-videos/#download',
+    live: 'https://itsmearundas.github.io/Detecting-and-classifying-multiple-objects-in-images-and-videos/#',
     screenshot: '/assets/img/projects/object-detection.png',
     techStack: [
       'Python', 'YOLOv8n', 'EfficientNet-B0', 'ByteTrack',
