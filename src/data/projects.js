@@ -1,5 +1,8 @@
 // ── Projects Data ──
 // Place screenshots (app home page) in: public/assets/img/projects/
+//
+// Ordered best-first: most complete / most impressive / live-demoable
+// projects lead, with in-development work (InnerForge) placed last.
 
 export const projects = [
   {
@@ -75,105 +78,8 @@ export const projects = [
     gradClass: 'cyan',
   },
   {
-    id: 'innerforge',
-    num: '03',
-    type: 'personal',
-    category: 'MERN FULL-STACK · AI',
-    title: 'InnerForge — AI Self-Awareness Platform',
-    shortTitle: 'InnerForge',
-    tagline: 'AI that learns your psychological profile from your journal, then attacks your ideas with your own blind spots.',
-    description:
-      'InnerForge combines MirrorMind (an AI-powered private journal that builds your psychological profile) with ArgumentLab (an AI idea stress-tester) into one unified MERN platform. The core magic: the stress-tester uses your detected blind spots from your journal to attack your ideas personally — not generically. Features a live debate Arena powered by Socket.io and a bias Evolution Tracker.',
-    period: '2025 — Present',
-    github: '', // Add your GitHub link here
-    live: '', // Add your live link here
-    screenshot: '/assets/img/projects/innerforge.png',
-    techStack: [
-      'React', 'Vite', 'TipTap', 'Zustand', 'Tailwind CSS',
-      'Node.js', 'Express', 'MongoDB Atlas', 'Socket.io',
-      'JWT', 'Claude API (Anthropic)', 'Recharts', 'D3.js',
-    ],
-    features: [
-      'MirrorMind — AI journal that detects emotions, themes, cognitive biases per entry',
-      'Psychological profile builder: top biases, recurring fears, decision patterns',
-      'ArgumentLab — AI attacks ideas from 10 angles using your personal blind spots first',
-      'Steel Man mode builds the strongest version of any idea before attacking it',
-      'Live debate Arena with Socket.io — challenge friends to real-time idea battles',
-      'D3.js argument tree visualization: branching attack/defence tree for ideas',
-      'Recharts bias radar chart, emotion timeline, and psych evolution tracker',
-      'Anonymous community idea submissions with weekly voting for Idea of the Week',
-    ],
-    results: [
-      { value: '4', label: 'Core Modules' },
-      { value: '10', label: 'Attack Angles' },
-      { value: 'Live', label: 'Socket.io Arena' },
-      { value: 'AI', label: 'Claude API' },
-    ],
-    color: 'purple',
-    gradClass: 'purple',
-  },
-  {
-    id: 'expense-tracker',
-    num: '04',
-    type: 'personal',
-    category: 'FULL-STACK · FLASK',
-    title: 'ExpenseTracker — Personal Finance Manager',
-    shortTitle: 'ExpenseTracker',
-    tagline: 'A full personal finance tracker that became the technical centerpiece of a full interview loop at an AI product company.',
-    description:
-      'Built a full personal finance tracker by architecting a Flask + SQLite backend with a vanilla JS frontend handling real-time CRUD and category-based spend analytics. This project became the technical centerpiece of a full-round interview loop at an AI product company, where I walked engineers through my own architecture decisions live.',
-    period: '2025',
-    github: 'https://github.com/itsmearundas/ExpenseTracker',
-    live: 'https://expensetracker-33dk.onrender.com/',
-    screenshot: '/assets/img/projects/expense-tracker.png',
-    techStack: ['Python', 'Flask', 'SQLite', 'JavaScript', 'HTML5', 'CSS3'],
-    features: [
-      'Full CRUD operations for income and expense entries',
-      'Category-based spend analytics with search and filtering',
-      'Real-time updates with no page reloads (vanilla JS + fetch)',
-      'Indian Rupee (₹) currency formatting throughout',
-      'Walked engineers through the architecture live in a technical interview round',
-    ],
-    results: [
-      { value: 'Flask', label: '+ SQLite Backend' },
-      { value: 'Live', label: 'Interview Centerpiece' },
-      { value: 'Full', label: 'CRUD + Analytics' },
-    ],
-    color: 'mint',
-    gradClass: 'mint',
-  },
-  {
-    id: 'localdrop',
-    num: '05',
-    type: 'personal',
-    category: 'FULL-STACK · REAL-TIME',
-    title: 'LocalDrop — Local Network File Sharing',
-    shortTitle: 'LocalDrop',
-    tagline: 'Replicates the speed of AirDrop across any device on a shared network.',
-    description:
-      'Built a local network file-sharing tool by combining Node.js, Express, and Socket.io with a React frontend — featuring QR-code device pairing, group chat, and role-based (admin/guest) access, which replicates the speed of AirDrop across any device on a shared network.',
-    period: '2025',
-    github: 'https://github.com/itsmearundas/LocalDrop',
-    live: 'https://localdrop-f9fj.onrender.com/',
-    screenshot: '/assets/img/projects/localdrop.png',
-    techStack: ['Node.js', 'Express', 'Socket.io', 'React.js', 'QR Code'],
-    features: [
-      'QR-code based instant device pairing on the same network',
-      'Real-time group chat alongside file transfer via Socket.io',
-      'Role-based access: admin and guest permissions',
-      'AirDrop-like transfer speed across any device, not just one ecosystem',
-    ],
-    results: [
-      { value: 'Socket.io', label: 'Real-time Core' },
-      { value: 'QR', label: 'Device Pairing' },
-      { value: 'Admin/Guest', label: 'Role Access' },
-    ],
-    color: 'cyan',
-    gradClass: 'cyan',
-  },
-  {
     id: 'pdfforge',
-    num: '06',
+    num: '03',
     type: 'personal',
     category: 'FRONTEND · CLIENT-SIDE',
     title: 'PDFForge — The Complete PDF Toolkit',
@@ -204,7 +110,7 @@ export const projects = [
   },
   {
     id: 'vaultlock',
-    num: '07',
+    num: '04',
     type: 'personal',
     category: 'DESKTOP · SECURITY',
     title: 'VaultLock — Encrypted File Vault',
@@ -235,7 +141,7 @@ export const projects = [
   },
   {
     id: 'typeforge',
-    num: '08',
+    num: '05',
     type: 'personal',
     category: 'FRONTEND · JAVASCRIPT',
     title: 'TypeForge — Precision Typing Trainer',
@@ -262,5 +168,104 @@ export const projects = [
     ],
     color: 'mint',
     gradClass: 'mint',
+  },
+  {
+    id: 'expense-tracker',
+    num: '06',
+    type: 'personal',
+    category: 'FULL-STACK · FLASK',
+    title: 'ExpenseTracker — Personal Finance Manager',
+    shortTitle: 'ExpenseTracker',
+    tagline: 'A full personal finance tracker that became the technical centerpiece of a full interview loop at an AI product company.',
+    description:
+      'Built a full personal finance tracker by architecting a Flask + SQLite backend with a vanilla JS frontend handling real-time CRUD and category-based spend analytics. This project became the technical centerpiece of a full-round interview loop at an AI product company, where I walked engineers through my own architecture decisions live.',
+    period: '2025',
+    github: 'https://github.com/itsmearundas/ExpenseTracker',
+    live: 'https://expensetracker-33dk.onrender.com/',
+    screenshot: '/assets/img/projects/expense-tracker.png',
+    techStack: ['Python', 'Flask', 'SQLite', 'JavaScript', 'HTML5', 'CSS3'],
+    features: [
+      'Full CRUD operations for income and expense entries',
+      'Category-based spend analytics with search and filtering',
+      'Real-time updates with no page reloads (vanilla JS + fetch)',
+      'Indian Rupee (₹) currency formatting throughout',
+      'Walked engineers through the architecture live in a technical interview round',
+    ],
+    results: [
+      { value: 'Flask', label: '+ SQLite Backend' },
+      { value: 'Live', label: 'Interview Centerpiece' },
+      { value: 'Full', label: 'CRUD + Analytics' },
+    ],
+    color: 'mint',
+    gradClass: 'mint',
+  },
+  {
+    id: 'localdrop',
+    num: '07',
+    type: 'personal',
+    category: 'FULL-STACK · REAL-TIME',
+    title: 'LocalDrop — Local Network File Sharing',
+    shortTitle: 'LocalDrop',
+    tagline: 'Replicates the speed of AirDrop across any device on a shared network.',
+    description:
+      'Built a local network file-sharing tool by combining Node.js, Express, and Socket.io with a React frontend — featuring QR-code device pairing, group chat, and role-based (admin/guest) access, which replicates the speed of AirDrop across any device on a shared network.',
+    period: '2025',
+    github: 'https://github.com/itsmearundas/LocalDrop',
+    live: 'https://localdrop-f9fj.onrender.com/',
+    screenshot: '/assets/img/projects/localdrop.png',
+    techStack: ['Node.js', 'Express', 'Socket.io', 'React.js', 'QR Code'],
+    features: [
+      'QR-code based instant device pairing on the same network',
+      'Real-time group chat alongside file transfer via Socket.io',
+      'Role-based access: admin and guest permissions',
+      'AirDrop-like transfer speed across any device, not just one ecosystem',
+    ],
+    results: [
+      { value: 'Socket.io', label: 'Real-time Core' },
+      { value: 'QR', label: 'Device Pairing' },
+      { value: 'Admin/Guest', label: 'Role Access' },
+    ],
+    color: 'cyan',
+    gradClass: 'cyan',
+  },
+  {
+    id: 'innerforge',
+    num: '08',
+    type: 'personal',
+    status: 'in-development', // Not public — live/github links intentionally blank.
+    category: 'MERN FULL-STACK · AI',
+    title: 'InnerForge — AI Self-Awareness Platform',
+    shortTitle: 'InnerForge',
+    tagline: 'AI that learns your psychological profile from your journal, then attacks your ideas with your own blind spots. Currently in development.',
+    description:
+      'InnerForge combines MirrorMind (an AI-powered private journal that builds your psychological profile) with ArgumentLab (an AI idea stress-tester) into one unified MERN platform. The core magic: the stress-tester uses your detected blind spots from your journal to attack your ideas personally — not generically. Features a live debate Arena powered by Socket.io and a bias Evolution Tracker. Still under active development — the live demo and source are not public yet and are shared on request.',
+    period: '2025 — Present',
+    github: '', // Intentionally private — not published while in development.
+    live: '', // Intentionally private — shared by request only, see accessNote below.
+    accessNote: 'This project is under active development and isn\'t public yet. Want a walkthrough or a demo link? Reach out via the contact section.',
+    screenshot: '/assets/img/projects/innerforge.png',
+    techStack: [
+      'React', 'Vite', 'TipTap', 'Zustand', 'Tailwind CSS',
+      'Node.js', 'Express', 'MongoDB Atlas', 'Socket.io',
+      'JWT', 'Claude API (Anthropic)', 'Recharts', 'D3.js',
+    ],
+    features: [
+      'MirrorMind — AI journal that detects emotions, themes, cognitive biases per entry',
+      'Psychological profile builder: top biases, recurring fears, decision patterns',
+      'ArgumentLab — AI attacks ideas from 10 angles using your personal blind spots first',
+      'Steel Man mode builds the strongest version of any idea before attacking it',
+      'Live debate Arena with Socket.io — challenge friends to real-time idea battles',
+      'D3.js argument tree visualization: branching attack/defence tree for ideas',
+      'Recharts bias radar chart, emotion timeline, and psych evolution tracker',
+      'Anonymous community idea submissions with weekly voting for Idea of the Week',
+    ],
+    results: [
+      { value: '4', label: 'Core Modules' },
+      { value: '10', label: 'Attack Angles' },
+      { value: 'Live', label: 'Socket.io Arena' },
+      { value: 'AI', label: 'Claude API' },
+    ],
+    color: 'purple',
+    gradClass: 'purple',
   },
 ];

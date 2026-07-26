@@ -32,7 +32,15 @@ export default function ProjectDetail() {
 
       {/* ── Back button — styled ── */}
       <button
-        onClick={() => nav(-1)}
+        onClick={() => {
+          // BUG FIX: this used to call nav(-1) (plain browser "back"), which
+          // could land anywhere depending on history — in practice it often
+          // dropped the user at the top of the home page (About/Hero) instead
+          // of the Projects section. Set an explicit scroll target and
+          // navigate home directly so it's always correct.
+          sessionStorage.setItem('scrollTarget', 'projects');
+          nav('/');
+        }}
         style={{
           display: 'inline-flex',
           alignItems: 'center',
@@ -132,7 +140,7 @@ export default function ProjectDetail() {
                 color: 'var(--muted)', fontFamily: 'var(--display)', fontSize: '.65rem',
                 fontWeight: 700, letterSpacing: '.04em',
               }}>
-                <i className="fab fa-github" /> Private / Coming Soon
+                <i className="fab fa-github" /> {p.status === 'in-development' ? 'Not Public Yet' : 'Private / Coming Soon'}
               </div>
             )}
 
@@ -151,8 +159,30 @@ export default function ProjectDetail() {
               >
                 <i className="fas fa-external-link-alt" /> Live Demo
               </a>
+            ) : p.status === 'in-development' ? (
+              <a href="/#contact"
+                style={{
+                  display: 'inline-flex', alignItems: 'center', gap: 8,
+                  padding: '12px 22px', borderRadius: '100px',
+                  background: 'rgba(234,179,8,.08)', border: '1px solid rgba(234,179,8,.25)',
+                  color: '#eab308', fontFamily: 'var(--display)', fontSize: '.65rem',
+                  fontWeight: 700, letterSpacing: '.04em', textDecoration: 'none',
+                  transition: 'all .2s',
+                }}
+                onMouseEnter={e => { e.currentTarget.style.background = 'rgba(234,179,8,.15)'; }}
+                onMouseLeave={e => { e.currentTarget.style.background = 'rgba(234,179,8,.08)'; }}
+              >
+                <i className="fas fa-lock" /> Available by Request
+              </a>
             ) : null}
           </div>
+
+          {p.accessNote && (
+            <p style={{ fontSize: '.78rem', color: 'var(--muted)', lineHeight: 1.7, marginTop: -8, marginBottom: 24, maxWidth: 520 }}>
+              <i className="fas fa-circle-info" style={{ color: '#eab308', marginRight: 6 }} />
+              {p.accessNote}
+            </p>
+          )}
 
           {/* Results grid */}
           <div className="proj-results-grid">

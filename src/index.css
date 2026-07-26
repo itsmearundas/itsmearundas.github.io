@@ -385,6 +385,7 @@ nav{
 }
 .proj-badge.academic{background:rgba(255,107,53,.1);border:1px solid rgba(255,107,53,.2);color:var(--orange)}
 .proj-badge.personal{background:rgba(168,85,247,.1);border:1px solid rgba(168,85,247,.2);color:var(--purple)}
+.proj-badge.development{background:rgba(234,179,8,.1);border:1px solid rgba(234,179,8,.25);color:#eab308}
 .proj-head{padding:32px 32px 24px;border-bottom:1px solid rgba(255,255,255,.05);position:relative}
 .proj-num{font-family:var(--display);font-size:.65rem;font-weight:700;color:var(--orange);letter-spacing:.12em;margin-bottom:12px;text-transform:uppercase}
 .proj-num.cyan{color:#06b6d4}
@@ -412,6 +413,7 @@ nav{
 .proj-link.fill.mint{background:linear-gradient(135deg,var(--mint),#0ea5e9);color:#000}
 .proj-link.outline{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);color:var(--white)}
 .proj-link.outline:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.2)}
+.proj-link.locked{background:rgba(234,179,8,.08);border:1px solid rgba(234,179,8,.2);color:#eab308;cursor:default}
 .proj-cta{display:inline-flex;align-items:center;gap:8px;font-size:.72rem;font-weight:700;color:var(--orange);letter-spacing:.04em;font-family:var(--display);margin-left:auto}
 
 /* ══ PROJECT DETAIL PAGE ══ */

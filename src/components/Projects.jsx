@@ -31,8 +31,8 @@ function ProjCard({ p, delayMs, onClick }) {
       style={{ cursor: 'pointer', position: 'relative', transitionDelay: `${delayMs}ms` }}
     >
       <div className={`proj-glow ${p.gradClass}`} />
-      <span className={`proj-badge ${p.type === 'academic' ? 'academic' : 'personal'}`}>
-        {p.type === 'academic' ? 'Academic' : 'Personal'}
+      <span className={`proj-badge ${p.status === 'in-development' ? 'development' : (p.type === 'academic' ? 'academic' : 'personal')}`}>
+        {p.status === 'in-development' ? 'In Development' : (p.type === 'academic' ? 'Academic' : 'Personal')}
       </span>
 
       <div className="proj-head">
@@ -55,11 +55,15 @@ function ProjCard({ p, delayMs, onClick }) {
               <i className="fab fa-github" /> GitHub
             </a>
           )}
-          {p.live && (
+          {p.live ? (
             <a href={p.live} target="_blank" rel="noreferrer" className={`proj-link fill ${p.gradClass}`} onClick={e => e.stopPropagation()}>
               <i className="fas fa-external-link-alt" /> Live
             </a>
-          )}
+          ) : p.status === 'in-development' ? (
+            <span className="proj-link locked" onClick={e => e.stopPropagation()}>
+              <i className="fas fa-lock" /> Access by Request
+            </span>
+          ) : null}
           <span className="proj-cta">View Details <i className="fas fa-arrow-right" /></span>
         </div>
       </div>

@@ -25,7 +25,24 @@ export default function App() {
     // Safety net: guarantee scroll is never left locked on any route.
     document.body.style.overflow = '';
     document.documentElement.style.overflow = '';
-    window.scrollTo(0, 0);
+
+    // BUG FIX: this effect used to unconditionally call window.scrollTo(0, 0)
+    // on every route change. That fired even when returning from a project
+    // page via "Back to Projects", stomping over the intended destination
+    // and landing back at the very top of the page (Hero/About) instead of
+    // the Projects section. Checking for a requested scroll target first
+    // lets callers (e.g. ProjectDetail's back button) say where they
+    // actually want to land.
+    const scrollTarget = sessionStorage.getItem('scrollTarget');
+    if (scrollTarget) {
+      sessionStorage.removeItem('scrollTarget');
+      setTimeout(() => {
+        document.getElementById(scrollTarget)?.scrollIntoView({ behavior: 'auto' });
+      }, 60);
+    } else {
+      window.scrollTo(0, 0);
+    }
+
     setTimeout(() => {
       const obs = new IntersectionObserver(
         entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } }),
