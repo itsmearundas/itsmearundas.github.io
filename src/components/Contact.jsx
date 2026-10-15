@@ -50,13 +50,13 @@ export default function Contact() {
                 <div className="cl-val">@itsmearundas</div>
               </div>
             </a>
-            <a href="https://leetcode.com/itsmearundas" target="_blank" rel="noreferrer" className="contact-link">
+            {/* <a href="https://leetcode.com/itsmearundas" target="_blank" rel="noreferrer" className="contact-link">
               <i className="fas fa-code" style={{ width: 32, height: 32, background: 'linear-gradient(135deg,#f89f1b,#f6a623)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '.8rem', color: '#fff' }} />
               <div>
                 <div className="cl-label">LeetCode</div>
                 <div className="cl-val">@itsmearundas</div>
               </div>
-            </a>
+            </a> */}
             <a href="https://instagram.com/itsmearundas" target="_blank" rel="noreferrer" className="contact-link">
               <i className="fab fa-instagram" style={{ width: 32, height: 32, background: 'linear-gradient(135deg,#f09433,#dc2743,#bc1888)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '.8rem', color: '#fff' }} />
               <div>

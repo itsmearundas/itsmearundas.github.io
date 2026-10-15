@@ -40,23 +40,23 @@ export const socialProfiles = [
     ],
     highlight: 'Professional profile & networking hub',
   },
-  {
-    id: 'leetcode',
-    platform: 'LeetCode',
-    handle: 'itsmearundas',
-    url: 'https://leetcode.com/itsmearundas',
-    icon: 'fas fa-code',
-    screenshot: '/assets/social/leetcode.png',
-    iconBg: 'linear-gradient(135deg,#f89f1b,#f6a623)',
-    iconColor: '#fff',
-    description:
-      'Competitive programming and algorithm practice profile. I use LeetCode to sharpen data structures, algorithms, and problem-solving skills in Python and JavaScript — the same foundation that powers efficient ML data pipelines and optimised backend APIs in my projects.',
-    stats: [
-      { label: 'Language', value: 'Python, JS' },
-      { label: 'Focus', value: 'Algorithms & DS' },
-    ],
-    highlight: 'Competitive programming & coding challenges',
-  },
+  // {
+  //   id: 'leetcode',
+  //   platform: 'LeetCode',
+  //   handle: 'itsmearundas',
+  //   url: 'https://leetcode.com/itsmearundas',
+  //   icon: 'fas fa-code',
+  //   screenshot: '/assets/social/leetcode.png',
+  //   iconBg: 'linear-gradient(135deg,#f89f1b,#f6a623)',
+  //   iconColor: '#fff',
+  //   description:
+  //     'Competitive programming and algorithm practice profile. I use LeetCode to sharpen data structures, algorithms, and problem-solving skills in Python and JavaScript — the same foundation that powers efficient ML data pipelines and optimised backend APIs in my projects.',
+  //   stats: [
+  //     { label: 'Language', value: 'Python, JS' },
+  //     { label: 'Focus', value: 'Algorithms & DS' },
+  //   ],
+  //   highlight: 'Competitive programming & coding challenges',
+  // },
   {
     id: 'instagram',
     platform: 'Instagram',
