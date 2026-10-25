@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import ResumeModal from './ResumeModal';
 
 const links = [
   { href: '#about',    label: 'About'    },
@@ -14,6 +15,7 @@ const links = [
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [resumeOpen, setResumeOpen] = useState(false);
   const location = useLocation();
   const isHome = location.pathname === '/';
 
@@ -52,9 +54,9 @@ export default function Navbar() {
           )}
         </div>
 
-        <a href="/assets/Arun_Das_Resume.pdf" className="nav-cta" download target="_blank" rel="noreferrer">
+        <button type="button" className="nav-cta" onClick={() => setResumeOpen(true)} style={{ border: 'none', cursor: 'pointer' }}>
           <i className="fas fa-download"></i> Resume
-        </a>
+        </button>
 
         <button className="nav-ham" onClick={() => setMenuOpen(o => !o)} aria-label="Menu">
           <span style={menuOpen ? { transform: 'rotate(45deg) translate(5px,5px)' } : {}} />
@@ -72,10 +74,11 @@ export default function Navbar() {
         {!isHome && (
           <Link to="/" onClick={() => setMenuOpen(false)}>← Back to Portfolio</Link>
         )}
-        <a href="/assets/Arun_Das_Resume.pdf" download style={{ color: 'var(--orange)' }}>
+        <a href="#resume" onClick={e => { e.preventDefault(); setMenuOpen(false); setResumeOpen(true); }} style={{ color: 'var(--orange)' }}>
           <i className="fas fa-download" style={{ marginRight: 8 }}></i>Download Resume
         </a>
       </div>
+      <ResumeModal open={resumeOpen} onClose={() => setResumeOpen(false)} />
     </>
   );
 }

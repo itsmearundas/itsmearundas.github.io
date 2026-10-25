@@ -1,12 +1,12 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { projects } from '../data/projects';
+import ScreenshotSlider from '../components/ScreenshotSlider';
 
 export default function ProjectDetail() {
   const { id } = useParams();
   const nav = useNavigate();
   const project = projects.find(p => p.id === id);
-  const [imgErr, setImgErr] = useState(false);
 
   useEffect(() => { window.scrollTo(0, 0); }, [id]);
 
@@ -99,21 +99,7 @@ export default function ProjectDetail() {
       <div className="proj-detail-layout">
         {/* ── LEFT: Screenshot + links ── */}
         <div className="proj-detail-left">
-          <div className="screenshot-wrap">
-            {!imgErr && p.screenshot ? (
-              <img
-                src={p.screenshot}
-                alt={`${p.title} — app home page`}
-                onError={() => setImgErr(true)}
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-              />
-            ) : (
-              <div className="screenshot-placeholder">
-                <i className="fas fa-image" />
-                <p>Screenshot coming soon.<br />Place <code style={{ fontSize: '.65rem', background: 'rgba(255,255,255,.08)', padding: '2px 6px', borderRadius: 4 }}>{p.screenshot}</code> in the public folder.</p>
-              </div>
-            )}
-          </div>
+          <ScreenshotSlider images={p.screenshots || (p.screenshot ? [p.screenshot] : [])} title={p.title} />
 
           {/* ── Action buttons ── */}
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 24 }}>

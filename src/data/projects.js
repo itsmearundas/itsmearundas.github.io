@@ -1,5 +1,6 @@
 // ── Projects Data ──
-// Place screenshots (app home page) in: public/assets/img/projects/
+// Place screenshots in: public/assets/img/projects/
+// Each project has a `screenshots` array — add as many images as you like.
 //
 // Ordered best-first: most complete / most impressive / live-demoable
 // projects lead, with in-development work (InnerForge) placed last.
@@ -18,7 +19,12 @@ export const projects = [
     period: 'Jan 2026 – Mar 2026',
     github: 'https://github.com/itsmearundas/Detecting-and-classifying-multiple-objects-in-images-and-videos',
     live: 'https://itsmearundas.github.io/Detecting-and-classifying-multiple-objects-in-images-and-videos/#',
-    screenshot: '/assets/img/projects/object-detection.png',
+    // Add more screenshots to this list — visitors can slide through all of them.
+    screenshots: [
+      '/assets/img/projects/object-detection.png',
+      // '/assets/img/projects/object-detection-2.png',
+      // '/assets/img/projects/object-detection-3.png',
+    ],
     techStack: [
       'Python', 'YOLOv8n', 'EfficientNet-B0', 'ByteTrack',
       'Flask', 'React.js', 'OpenCV', 'PyTorch',
@@ -54,7 +60,12 @@ export const projects = [
     period: 'Jun 2025 – Dec 2025',
     github: 'https://github.com/itsmearundas/credit-default',
     live: 'https://your-credit-default-demo.vercel.app', // ← Replace with your actual live URL
-    screenshot: '/assets/img/projects/credit-default.png',
+    // Add more screenshots to this list — visitors can slide through all of them.
+    screenshots: [
+      '/assets/img/projects/credit-default.png',
+      // '/assets/img/projects/credit-default-2.png',
+      // '/assets/img/projects/credit-default-3.png',
+    ],
     techStack: [
       'Python', 'Random Forest', 'XGBoost', 'scikit-learn',
       'SMOTE', 'Flask', 'React.js', 'Node.js', 'MongoDB', 'Pandas', 'NumPy',
@@ -90,7 +101,12 @@ export const projects = [
     period: '2026',
     github: 'https://github.com/itsmearundas/PDFForge',
     live: 'https://itsmearundas.github.io/PDFForge/',
-    screenshot: '/assets/img/projects/pdfforge.png',
+    // Add more screenshots to this list — visitors can slide through all of them.
+    screenshots: [
+      '/assets/img/projects/pdfforge.png',
+      // '/assets/img/projects/pdfforge-2.png',
+      // '/assets/img/projects/pdfforge-3.png',
+    ],
     techStack: ['JavaScript', 'HTML5', 'CSS3', 'pdf-lib', 'Canvas API'],
     features: [
       '12 tools in one app: merge, split/extract, organize, rotate, compress, watermark, page numbers, sign, protect/unlock, JPG↔PDF, PDF-to-Word',
@@ -121,7 +137,12 @@ export const projects = [
     period: '2026',
     github: 'https://github.com/itsmearundas/VaultLock',
     live: 'https://itsmearundas.github.io/Vault-Lock/',
-    screenshot: '/assets/img/projects/vaultlock.png',
+    // Add more screenshots to this list — visitors can slide through all of them.
+    screenshots: [
+      '/assets/img/projects/vaultlock.png',
+      // '/assets/img/projects/vaultlock-2.png',
+      // '/assets/img/projects/vaultlock-3.png',
+    ],
     techStack: ['AES-256-CTR', 'HMAC-SHA256', 'Windows Desktop'],
     features: [
       'Every file encrypted at rest with AES-256-CTR + HMAC-SHA256',
@@ -152,7 +173,12 @@ export const projects = [
     period: '2026',
     github: 'https://github.com/itsmearundas/TypeForge',
     live: 'https://itsmearundas.github.io/TypeForge/',
-    screenshot: '/assets/img/projects/typeforge.png',
+    // Add more screenshots to this list — visitors can slide through all of them.
+    screenshots: [
+      '/assets/img/projects/typeforge.png',
+      // '/assets/img/projects/typeforge-2.png',
+      // '/assets/img/projects/typeforge-3.png',
+    ],
     techStack: ['JavaScript', 'HTML5', 'CSS3', 'Chart rendering'],
     features: [
       'Real-time WPM, accuracy, and mistake tracking while typing',
@@ -182,7 +208,12 @@ export const projects = [
     period: '2025',
     github: 'https://github.com/itsmearundas/ExpenseTracker',
     live: 'https://expensetracker-33dk.onrender.com/',
-    screenshot: '/assets/img/projects/expense-tracker.png',
+    // Add more screenshots to this list — visitors can slide through all of them.
+    screenshots: [
+      '/assets/img/projects/expense-tracker.png',
+      // '/assets/img/projects/expense-tracker-2.png',
+      // '/assets/img/projects/expense-tracker-3.png',
+    ],
     techStack: ['Python', 'Flask', 'SQLite', 'JavaScript', 'HTML5', 'CSS3'],
     features: [
       'Full CRUD operations for income and expense entries',
@@ -212,7 +243,12 @@ export const projects = [
     period: '2025',
     github: 'https://github.com/itsmearundas/LocalDrop',
     live: 'https://localdrop-f9fj.onrender.com/',
-    screenshot: '/assets/img/projects/localdrop.png',
+    // Add more screenshots to this list — visitors can slide through all of them.
+    screenshots: [
+      '/assets/img/projects/localdrop.png',
+      // '/assets/img/projects/localdrop-2.png',
+      // '/assets/img/projects/localdrop-3.png',
+    ],
     techStack: ['Node.js', 'Express', 'Socket.io', 'React.js', 'QR Code'],
     features: [
       'QR-code based instant device pairing on the same network',
@@ -243,7 +279,12 @@ export const projects = [
     github: '', // Intentionally private — not published while in development.
     live: '', // Intentionally private — shared by request only, see accessNote below.
     accessNote: 'This project is under active development and isn\'t public yet. Want a walkthrough or a demo link? Reach out via the contact section.',
-    screenshot: '/assets/img/projects/innerforge.png',
+    // Add more screenshots to this list — visitors can slide through all of them.
+    screenshots: [
+      '/assets/img/projects/innerforge.png',
+      // '/assets/img/projects/innerforge-2.png',
+      // '/assets/img/projects/innerforge-3.png',
+    ],
     techStack: [
       'React', 'Vite', 'TipTap', 'Zustand', 'Tailwind CSS',
       'Node.js', 'Express', 'MongoDB Atlas', 'Socket.io',

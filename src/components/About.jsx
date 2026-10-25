@@ -145,7 +145,7 @@ function StoryCard() {
         an end-to-end credit risk prediction platform on 30,000 financial records, and InnerForge — an AI self-awareness tool
         powered by the Claude API.
         <br /><br />
-        Outside projects I stay sharp with cloud workshops, competitive coding on LeetCode, and following the latest in AI research.
+        Outside projects I stay sharp with cloud workshops, hackathons, and following the latest in AI research.
         Actively looking for internship or entry-level roles in software development, ML engineering, or data analysis.
       </p>
 
