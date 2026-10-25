@@ -22,8 +22,9 @@ export const projects = [
     // Add more screenshots to this list — visitors can slide through all of them.
     screenshots: [
       '/assets/img/projects/object-detection.png',
-      // '/assets/img/projects/object-detection-2.png',
-      // '/assets/img/projects/object-detection-3.png',
+      '/assets/img/projects/object-detection-2.png',
+      '/assets/img/projects/object-detection-3.png',
+      '/assets/img/projects/object-detection-4.png',
     ],
     techStack: [
       'Python', 'YOLOv8n', 'EfficientNet-B0', 'ByteTrack',
