@@ -256,7 +256,7 @@ export const projects = [
     live: 'https://localdrop-f9fj.onrender.com/',
     // Add more screenshots to this list — visitors can slide through all of them.
     screenshots: [
-      '/assets/img/projects/localdrop.png',
+      '/assets/img/projects/localdrop.jpg',
       '/assets/img/projects/localdrop-2.png',
       '/assets/img/projects/localdrop-3.png',
       '/assets/img/projects/localdrop-4.png',
