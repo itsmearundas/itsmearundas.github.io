@@ -126,7 +126,7 @@ export default function ProjectDetail() {
                 color: 'var(--muted)', fontFamily: 'var(--display)', fontSize: '.65rem',
                 fontWeight: 700, letterSpacing: '.04em',
               }}>
-                <i className="fab fa-github" /> {p.status === 'in-development' ? 'Not Public Yet' : 'Private / Coming Soon'}
+                <i className="fab fa-github" /> {p.status === 'in-development' ? 'Not Public Yet' : p.byRequest ? 'Private Repository' : 'Private / Coming Soon'}
               </div>
             )}
 
@@ -145,7 +145,7 @@ export default function ProjectDetail() {
               >
                 <i className="fas fa-external-link-alt" /> Live Demo
               </a>
-            ) : p.status === 'in-development' ? (
+            ) : (p.status === 'in-development' || p.byRequest) ? (
               <a href="/#contact"
                 style={{
                   display: 'inline-flex', alignItems: 'center', gap: 8,

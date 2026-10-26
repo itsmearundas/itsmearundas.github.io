@@ -59,7 +59,7 @@ function ProjCard({ p, delayMs, onClick }) {
             <a href={p.live} target="_blank" rel="noreferrer" className={`proj-link fill ${p.gradClass}`} onClick={e => e.stopPropagation()}>
               <i className="fas fa-external-link-alt" /> Live
             </a>
-          ) : p.status === 'in-development' ? (
+          ) : (p.status === 'in-development' || p.byRequest) ? (
             <span className="proj-link locked" onClick={e => e.stopPropagation()}>
               <i className="fas fa-lock" /> Access by Request
             </span>

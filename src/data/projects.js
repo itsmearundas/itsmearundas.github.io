@@ -25,6 +25,10 @@ export const projects = [
       '/assets/img/projects/object-detection-2.png',
       '/assets/img/projects/object-detection-3.png',
       '/assets/img/projects/object-detection-4.png',
+      '/assets/img/projects/object-detection-5.png',
+      '/assets/img/projects/object-detection-6.png',
+      '/assets/img/projects/object-detection-7.png',
+      '/assets/img/projects/object-detection-8.png',
     ],
     techStack: [
       'Python', 'YOLOv8n', 'EfficientNet-B0', 'ByteTrack',
@@ -64,8 +68,9 @@ export const projects = [
     // Add more screenshots to this list — visitors can slide through all of them.
     screenshots: [
       '/assets/img/projects/credit-default.png',
-      // '/assets/img/projects/credit-default-2.png',
-      // '/assets/img/projects/credit-default-3.png',
+      '/assets/img/projects/credit-default-2.png',
+      '/assets/img/projects/credit-default-3.png',
+      '/assets/img/projects/credit-default-4.png',
     ],
     techStack: [
       'Python', 'Random Forest', 'XGBoost', 'scikit-learn',
@@ -105,8 +110,11 @@ export const projects = [
     // Add more screenshots to this list — visitors can slide through all of them.
     screenshots: [
       '/assets/img/projects/pdfforge.png',
-      // '/assets/img/projects/pdfforge-2.png',
-      // '/assets/img/projects/pdfforge-3.png',
+      '/assets/img/projects/pdfforge-2.png',
+      '/assets/img/projects/pdfforge-3.png',
+      '/assets/img/projects/pdfforge-4.png',
+      '/assets/img/projects/pdfforge-5.png',
+      '/assets/img/projects/pdfforge-6.png',
     ],
     techStack: ['JavaScript', 'HTML5', 'CSS3', 'pdf-lib', 'Canvas API'],
     features: [
@@ -136,8 +144,10 @@ export const projects = [
     description:
       'A Windows desktop vault for files you\'d rather keep off the visible desktop. Every file is AES-256-CTR + HMAC-SHA256 encrypted before it touches the vault, and file/folder names become random tokens on disk — the real names live only in an encrypted manifest. A second password opens a separate decoy vault; a third silently wipes the real vault with no visible trace.',
     period: '2026',
-    github: 'https://github.com/itsmearundas/VaultLock',
-    live: 'https://itsmearundas.github.io/Vault-Lock/',
+    github: '', // Intentionally private — shared by request only.
+    live: '',   // Intentionally private — shared by request only.
+    byRequest: true,
+    accessNote: 'VaultLock is a security tool, so the source code and download aren\'t public. Want a walkthrough, demo, or access? Reach out via the contact section.',
     // Add more screenshots to this list — visitors can slide through all of them.
     screenshots: [
       '/assets/img/projects/vaultlock.png',
@@ -177,8 +187,8 @@ export const projects = [
     // Add more screenshots to this list — visitors can slide through all of them.
     screenshots: [
       '/assets/img/projects/typeforge.png',
-      // '/assets/img/projects/typeforge-2.png',
-      // '/assets/img/projects/typeforge-3.png',
+      '/assets/img/projects/typeforge-2.png',
+      '/assets/img/projects/typeforge-3.png',
     ],
     techStack: ['JavaScript', 'HTML5', 'CSS3', 'Chart rendering'],
     features: [
@@ -212,7 +222,7 @@ export const projects = [
     // Add more screenshots to this list — visitors can slide through all of them.
     screenshots: [
       '/assets/img/projects/expense-tracker.png',
-      // '/assets/img/projects/expense-tracker-2.png',
+      '/assets/img/projects/expense-tracker-2.png',
       // '/assets/img/projects/expense-tracker-3.png',
     ],
     techStack: ['Python', 'Flask', 'SQLite', 'JavaScript', 'HTML5', 'CSS3'],
@@ -247,8 +257,12 @@ export const projects = [
     // Add more screenshots to this list — visitors can slide through all of them.
     screenshots: [
       '/assets/img/projects/localdrop.png',
-      // '/assets/img/projects/localdrop-2.png',
-      // '/assets/img/projects/localdrop-3.png',
+      '/assets/img/projects/localdrop-2.png',
+      '/assets/img/projects/localdrop-3.png',
+      '/assets/img/projects/localdrop-4.png',
+      '/assets/img/projects/localdrop-5.png',
+      '/assets/img/projects/localdrop-6.png',
+      '/assets/img/projects/localdrop-7.png',
     ],
     techStack: ['Node.js', 'Express', 'Socket.io', 'React.js', 'QR Code'],
     features: [
