@@ -221,7 +221,7 @@ export const projects = [
     live: 'https://expensetracker-33dk.onrender.com/',
     // Add more screenshots to this list — visitors can slide through all of them.
     screenshots: [
-      '/assets/img/projects/expense-tracker.png',
+      '/assets/img/projects/expense-tracker.jpg',
       '/assets/img/projects/expense-tracker-2.png',
       // '/assets/img/projects/expense-tracker-3.png',
     ],
