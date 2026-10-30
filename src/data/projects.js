@@ -29,6 +29,10 @@ export const projects = [
       '/assets/img/projects/object-detection-6.png',
       '/assets/img/projects/object-detection-7.png',
       '/assets/img/projects/object-detection-8.png',
+      '/assets/img/projects/object-detection-9.png',
+      '/assets/img/projects/object-detection-10.png',
+      '/assets/img/projects/object-detection-11.png',
+
     ],
     techStack: [
       'Python', 'YOLOv8n', 'EfficientNet-B0', 'ByteTrack',
