@@ -218,7 +218,7 @@ export const skillGroups = [
         highlight: false,
         projects: [
           { id: 'object-detection', title: 'Object Detection', where: 'Version control — github.com/itsmearundas/object-detection' },
-          { id: 'credit-default',   title: 'Credit Default',   where: 'Version control — github.com/itsmearundas/credit-default' },
+          { id: 'credit-default',   title: 'Credit Default',   where: 'Version control — github.com/itsmearundas/Credit-Card-Default-prediction' },
           { id: 'innerforge',       title: 'InnerForge',       where: 'Version control & deployment tracking' },
           { id: 'expense-tracker',  title: 'ExpenseTracker',   where: 'github.com/itsmearundas/ExpenseTracker' },
           { id: 'localdrop',        title: 'LocalDrop',        where: 'github.com/itsmearundas/LocalDrop' },

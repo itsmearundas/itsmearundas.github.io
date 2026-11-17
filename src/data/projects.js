@@ -67,8 +67,9 @@ export const projects = [
     description:
       'Full-stack ML web application that predicts whether a credit card customer will default on their next payment. Trained a Random Forest classifier on 30,000 records from the Taiwan Credit Card Default dataset (UCI). Compared with XGBoost with full SMOTE balancing, feature engineering, and GridSearchCV hyperparameter tuning. Deployed via a Flask backend with a React frontend and MongoDB storage.',
     period: 'Jun 2025 – Dec 2025',
-    github: 'https://github.com/itsmearundas/credit-default',
-    live: 'https://your-credit-default-demo.vercel.app', // ← Replace with your actual live URL
+    github: 'https://github.com/itsmearundas/Credit-Card-Default-prediction',
+    live: '', // No hosted demo yet (Flask app runs locally). Paste the URL here once deployed.
+    byRequest: true, // Shows "Access by Request" instead of a dead Live button.
     // Add more screenshots to this list — visitors can slide through all of them.
     screenshots: [
       '/assets/img/projects/credit-default.png',
